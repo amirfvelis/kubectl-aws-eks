@@ -26,6 +26,13 @@ else
     echo "Using aws-iam-authenticator version: $(aws-iam-authenticator version)"
 fi
 
+echo "Downloading Argo"
+curl -LO https://github.com/argoproj/argo-rollouts/releases/latest/download/kubectl-argo-rollouts-linux-amd64
+echo "Setting Chmod"
+chmod +x ./kubectl-argo-rollouts-linux-amd64
+echo "Mv Argo Exec"
+mv ./kubectl-argo-rollouts-linux-amd64 /usr/bin/kubectl-argo-rollouts
+
 echo "Sh Kubectl"
 
 sh -c "kubectl $*"
