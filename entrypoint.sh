@@ -33,4 +33,6 @@ chmod +x ./kubectl-argo-rollouts-darwin-amd64
 echo "Mv Argo Exec"
 mv ./kubectl-argo-rollouts-darwin-amd64 /usr/local/bin/kubectl-argo-rollouts
 
+echo "Sh Kubectl"
+
 sh -c "kubectl $*"
